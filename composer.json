@@ -1,7 +1,7 @@
 {
     "name": "phpcollective/jwt-lara-auth",
     "type": "library",
-    "description": ":package_description",
+    "description": "JSON Web Token Authentication for Laravel and Lumen",
     "keywords": [
         "phpcollective",
         "jwt-lara-auth",
@@ -13,13 +13,14 @@
         {
             "name": "Al Amin Chayan",
             "email": "mail@chayan.me",
-            "homepage": ":author_website",
+            "homepage": "https://stackoverflow.com/users/3113693/chayan",
             "role": "Developer"
         }
     ],
     "require": {
+        "php": ">=7.0",
         "illuminate/support": ">=5.5",
-        "php" : ">=7.0"
+        "tymon/jwt-auth": "^0.5.12"
     },
     "require-dev": {
         "phpunit/phpunit" : ">=5.4.3",
