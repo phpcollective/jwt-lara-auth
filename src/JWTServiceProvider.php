@@ -13,7 +13,9 @@ class JWTServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if(!$this->app->routesAreCached()){
+            require __DIR__ . '/route.php';
+        }
     }
 
     /**
@@ -23,8 +25,6 @@ class JWTServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //$this->app->make('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
-
         $this->app->register(
             \Tymon\JWTAuth\Providers\LaravelServiceProvider::class
         );
