@@ -23,6 +23,14 @@ class JWTServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        //$this->app->make('Tymon\JWTAuth\Providers\JWTAuthServiceProvider');
+
+        $this->app->register(
+            \Tymon\JWTAuth\Providers\LaravelServiceProvider::class
+        );
+
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('JWTAuth', \Tymon\JWTAuth\Facades\JWTAuth::class);
+        $loader->alias('JWTFactory', \Tymon\JWTAuth\Facades\JWTFactory::class);
     }
 }

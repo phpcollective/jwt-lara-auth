@@ -1,6 +1,6 @@
 <?php
 
-namespace phpcollective\jwt-lara-auth;
+namespace PHPCollective\JWTLaraAuth;
 
 class SkeletonClass
 {
