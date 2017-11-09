@@ -1,7 +1,7 @@
 <?php
-Route::middleware(['api', 'auth'])
+Route::prefix('api/v1')
     ->namespace(PHPCollective\JWTLaraAuth\Controllers::class)
-    ->prefix('api/v1')
+    ->middleware(['api'])
     ->group(function () {
         Route::post('login', 'LoginController@login');
         Route::post('logout', 'LoginController@logout');
